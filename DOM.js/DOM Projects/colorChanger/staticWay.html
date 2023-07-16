@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colorChanger Static method</title>
+</head>
+<style>
+    div{
+        width: 100px;
+        height: 100px;
+        border: 2px solid black;
+        display: inline-block;
+    }
+    #grey{
+        background-color : grey;
+        cursor: pointer;
+    }
+    #white{
+        background-color : white;
+        cursor: pointer;
+    }
+    #blue{
+        background-color : blue;
+        cursor: pointer;
+    }
+    #yellow{
+        background-color : yellow;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <h1>Color Scheme Switcher</h1>
+    <div id="grey"></div>
+    <div id="white"></div>
+    <div id="blue"></div>
+    <div id="yellow"></div>
+    <p>Try clicking on one of the colors above
+        to change the background color of this page!</p>
+</body>
+<script>
+let grey = document.getElementById("grey")
+grey.addEventListener('click', function(e){
+  console.log(e)
+  console.log(e.target)
+  document.querySelector("body").style.backgroundColor = "grey"
+
+})
+let white = document.getElementById("white")
+white.addEventListener('click', function(e){
+  console.log(e)
+  console.log(e.target)
+  document.querySelector("body").style.backgroundColor = "white"
+
+})
+let blue = document.getElementById("blue")
+blue.addEventListener('click', function(e){
+  console.log(e)
+  console.log(e.target)
+  document.querySelector("body").style.backgroundColor = "blue"
+
+})
+let yellow = document.getElementById("yellow")
+yellow.addEventListener('click', function(e){
+  console.log(e)
+  console.log(e.target)
+  document.querySelector("body").style.backgroundColor = "yellow"
+
+})
+</script>
+</html>

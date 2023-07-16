@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: grey;
+    }
+     table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    div{
+        margin : 20px;
+        padding : 20px;
+    }
+    #ok{
+        border: 2px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+</style>
+<body>
+    <div id="insert"></div>
+    <div id="ok">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, laboriosam.</div>
+</body>
+ <script>
+    let k = document.getElementById("ok")
+    window.addEventListener('keydown',function(e) {
+        k.innerHTML = `
+        <table>
+
+  <tr>
+    <th>e.key</th>
+    <th>e.keyCode</th>
+    <th>e.code</th>
+  </tr>
+  <tr>
+    <td>${e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+
+</table>
+        `
+    })
+ </script>
+</html>

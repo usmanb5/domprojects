@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colorChanger Dynamic method</title>
+</head>
+<style>
+    div{
+        width: 100px;
+        height: 100px;
+        border: 2px solid black;
+        display: inline-block;
+    }
+    #grey{
+        background-color : grey;
+        cursor: pointer;
+    }
+    #white{
+        background-color : white;
+        cursor: pointer;
+    }
+    #blue{
+        background-color : blue;
+        cursor: pointer;
+    }
+    #yellow{
+        background-color : yellow;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <h1>Color Scheme Switcher</h1>
+    <div class ="button" id="grey"></div>
+    <div class ="button" id="white"></div>
+    <div class ="button" id="blue"></div>
+    <div class ="button" id="yellow"></div>
+    <p>Try clicking on one of the colors above
+        to change the background color of this page!</p>
+</body>
+<script>
+let buttons = document.querySelectorAll('.button');
+console.log(buttons);
+buttons.forEach(function (index) {
+  index.addEventListener('click', function (e) {
+    console.log(e);
+    console.log(e.target);
+    if (e.target.id === 'blue') {
+      document.querySelector('body').style.backgroundColor = e.target.id;
+    }
+    if (e.target.id === 'yellow') {
+      document.querySelector('body').style.backgroundColor = e.target.id;
+    }
+    if (e.target.id === 'white') {
+      document.querySelector('body').style.backgroundColor = e.target.id;
+    }
+    if (e.target.id === 'grey') {
+      document.querySelector('body').style.backgroundColor = e.target.id;
+    }
+  });
+});
+</script>
+</html>
+
+

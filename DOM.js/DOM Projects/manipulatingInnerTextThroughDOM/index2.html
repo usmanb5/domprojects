@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>hello my name is Jarvis</p>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    
+</body>
+<script>
+    let a;
+    // START 
+    document.getElementById("start").addEventListener('click',replace)
+    function replace(){
+        if(!a){
+            a = setInterval(function(){
+            console.log("whats Your name?",Date.now());
+        },1000)
+        }
+    }
+    // STOP 
+    document.getElementById("stop").addEventListener('click',terminate)
+    function terminate(){
+        clearInterval(a);
+        a = null
+    }
+</script>
+</html>
